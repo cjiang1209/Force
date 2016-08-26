@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <iostream>
+#include <cassert>
 
 using namespace std;
 
@@ -47,6 +48,12 @@ public:
 	const_iterator end() const
 	{
 		return _vertices.end();
+	}
+
+	int operator[](int index) const
+	{
+		assert(index >= 0 && index < _vertices.size());
+		return _vertices[index];
 	}
 
 	friend ostream& operator<<(ostream& out, const HyperEdge& edge)

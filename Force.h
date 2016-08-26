@@ -38,6 +38,7 @@ private:
 public:
 	Force(const HyperGraph& graph);
 	vector<int> execute() const;
+	vector<int> execute(vector<int> var_of_idx) const;
 };
 
 #endif
